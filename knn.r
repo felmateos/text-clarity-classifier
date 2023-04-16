@@ -1,4 +1,6 @@
-dataset = read.table("/home/chocomenta/Desktop/code/R/jogo.ods")
+setwd("/home/chocomenta/Desktop/code/R")
+dataset = read.csv2("jogo.csv", header = TRUE, sep = ";")
+head(dataset)
 
 knn <- function(dataset, query, k=1){
 
