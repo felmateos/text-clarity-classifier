@@ -1,0 +1,27 @@
+{
+    "author": "Massimiliano Marcon <me@marcon.me> (http://marcon.me)",
+    "name": "rmi.js",
+    "description": "Remote Method Invocation (RMI) for JavaScript ",
+    "keywords": [
+        "websocket",
+        "rmi",
+        "remote method invocation",
+        "socket.io",
+        "rpc",
+        "ajax"
+    ],
+    "version": "0.1.2",
+    "engines": {
+        "node": ">= 0.4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mmarcon/rmi.js.git"
+    },
+    "dependencies": {
+        "socket.io":"2.1.1",
+        "express":"4.16.3"
+    },
+    "devDependencies": {},
+    "main": "index"
+}
