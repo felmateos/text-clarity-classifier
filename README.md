@@ -16,7 +16,7 @@ image.png
  
  - [Pendente] Objeto PartRepository
     - inserir Part
-    - resuperar Part
+    - recuperar Part
     - return list de todas as Parts do repositório
     *Neste EP, apenas os servidores implementados por PartRepository devem ser registrados e recuperados do serviço de nomes do Java RMI.
 
