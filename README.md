@@ -8,19 +8,19 @@ image.png
 
  * Repositorio pode ser linked-list
  
- - [Parcial] Interface Part
+ - [OK] Interface Part
     - ID, automaticamente gerado pelo sistema
     - nome
     - descricao
     - list de subcomponentes (subPart, quant)
  
- - [Pendente] Objeto PartRepository
-    - inserir Part
+ - [Ongoing] Objeto PartRepository
+    - [OK]inserir Part
     - recuperar Part
     - return list de todas as Parts do repositório
     *Neste EP, apenas os servidores implementados por PartRepository devem ser registrados e recuperados do serviço de nomes do Java RMI.
 
-- [Pendente] Servidor
+- [OK] Servidor
     - poderao ocorrer várias execuções simultâneas do programa servidor
     - cada processo implementa (PartRepository, Part)
     - !cuidado, paramentros devem variar para os servidores. Add nome servidor
@@ -30,13 +30,13 @@ image.png
     - com o Repository:
         - examinar o nome e peças contidas
         - listar as peças
-        - buscar peças
+        - [Parcial]buscar peças
             - return nome e descricao
             - nome do repositorio
-            - return primitiva/agregada?
-            - return qtd de subcomponentes diretos e primitivos da peça
+            - [ajustar]return primitiva/agregada?
+            - [ajustar]return qtd de subcomponentes diretos e primitivos da peça
             - return lista de subpeças
-        - adicionar novas peças
+        - [OK]adicionar novas peças
             - !peças agregadas cujas sub-peças estejam distribuı́das por vários repositórios.
 
 
@@ -74,9 +74,9 @@ comandos como:
 
 - [Testar] addsubpart Adiciona à lista de sub-peças corrente n unidades da peça corrente.
 
-- [Pendente] addp Adiciona uma peça ao repositório corrente. A lista de sub-peças corrente é usada como lista de subcomponentes diretos da nova peça. (É só para isto que existe a lista de sub-peças corrente.)
+- [OK] addp Adiciona uma peça ao repositório corrente. A lista de sub-peças corrente é usada como lista de subcomponentes diretos da nova peça. (É só para isto que existe a lista de sub-peças corrente.)
 
-- [Pendente] quit Encerra a execução do cliente.
+- [OK] quit Encerra a execução do cliente.
 
 A lista acima tem a finalidade de ilustrar como um cliente “linha de comando” poderia funcionar. Tome-a como uma sugestão (incompleta, por sinal), que pode ser seguida ou não.
 Se você tiver gás para escrever um cliente com uma interface com o usuário mais elaborada e amigável (GUI), vá em frente!
