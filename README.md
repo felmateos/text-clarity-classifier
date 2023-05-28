@@ -9,15 +9,15 @@ image.png
  * Repositorio pode ser linked-list
  
  - [OK] Interface Part
-    - ID, automaticamente gerado pelo sistema
+    - [Parcial]ID, automaticamente gerado pelo sistema
     - nome
     - descricao
     - list de subcomponentes (subPart, quant)
  
  - [Ongoing] Objeto PartRepository
     - [OK]inserir Part
-    - recuperar Part
-    - return list de todas as Parts do repositório
+    - [Pendente]recuperar Part
+    - [OK]return list de todas as Parts do repositório
     *Neste EP, apenas os servidores implementados por PartRepository devem ser registrados e recuperados do serviço de nomes do Java RMI.
 
 - [OK] Servidor
@@ -28,16 +28,16 @@ image.png
 - [Pendente] Cliente
     - [OK] conexao com o servidor
     - com o Repository:
-        - examinar o nome e peças contidas
-        - listar as peças
-        - [Parcial]buscar peças
-            - return nome e descricao
+        - [OK]examinar o nome e peças contidas
+        - [OK]listar as peças
+        - [OK]buscar peças
+            - [OK]return nome e descricao
             - nome do repositorio
             - [ajustar]return primitiva/agregada?
             - [ajustar]return qtd de subcomponentes diretos e primitivos da peça
-            - return lista de subpeças
+            - [OK]return lista de subpeças
         - [OK]adicionar novas peças
-            - !peças agregadas cujas sub-peças estejam distribuı́das por vários repositórios.
+            - [ajustar]!peças agregadas cujas sub-peças estejam distribuı́das por vários repositórios.
 
 
 FUNCIONAMENTO:
@@ -64,15 +64,15 @@ comandos como:
 
 - [Pendente] bind Faz o cliente se conectar a outro servidor e muda o repositório corrente. Este comando recebe o nome de um repositório e obtém do serviço de nomes uma referência para esse repositório, que passa a ser o repositório corrente.
 
-- [Testar] listp Lista as peças do repositório corrente.
+- [OK] listp Lista as peças do repositório corrente.
 
-- [Testar] getp Busca uma peça por código. A busca é efetuada no repositório corrente. Se encontrada, a peça passa a ser a nova peça corrente.
+- [OK] getp Busca uma peça por código. A busca é efetuada no repositório corrente. Se encontrada, a peça passa a ser a nova peça corrente.
 
 - [Pendente] showp Mostra atributos da peça corrente.
 
 - [Pendente] clearlist Esvazia a lista de sub-peças corrente.
 
-- [Testar] addsubpart Adiciona à lista de sub-peças corrente n unidades da peça corrente.
+- [OK] addsubpart Adiciona à lista de sub-peças corrente n unidades da peça corrente.
 
 - [OK] addp Adiciona uma peça ao repositório corrente. A lista de sub-peças corrente é usada como lista de subcomponentes diretos da nova peça. (É só para isto que existe a lista de sub-peças corrente.)
 
