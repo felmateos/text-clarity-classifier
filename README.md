@@ -16,7 +16,7 @@ image.png
  
  - [Ongoing] Objeto PartRepository
     - [OK]inserir Part
-    - [Pendente]recuperar Part
+    - [OK]recuperar Part
     - [OK]return list de todas as Parts do repositório
     *Neste EP, apenas os servidores implementados por PartRepository devem ser registrados e recuperados do serviço de nomes do Java RMI.
 
@@ -32,12 +32,12 @@ image.png
         - [OK]listar as peças
         - [OK]buscar peças
             - [OK]return nome e descricao
-            - nome do repositorio
-            - [ajustar]return primitiva/agregada?
-            - [ajustar]return qtd de subcomponentes diretos e primitivos da peça
+            - [OK]nome do repositorio
+            - [OK]return primitiva/agregada?
+            - [OK]return qtd de subcomponentes diretos e primitivos da peça
             - [OK]return lista de subpeças
         - [OK]adicionar novas peças
-            - [ajustar]!peças agregadas cujas sub-peças estejam distribuı́das por vários repositórios.
+            - [OK]!peças agregadas cujas sub-peças estejam distribuı́das por vários repositórios.
 
 
 FUNCIONAMENTO:
@@ -62,13 +62,13 @@ Tal cliente apresentaria um prompt e ficaria esperando comandos do usuário. Ele
 comandos como:
 
 
-- [Pendente] bind Faz o cliente se conectar a outro servidor e muda o repositório corrente. Este comando recebe o nome de um repositório e obtém do serviço de nomes uma referência para esse repositório, que passa a ser o repositório corrente.
+- [OK] bind Faz o cliente se conectar a outro servidor e muda o repositório corrente. Este comando recebe o nome de um repositório e obtém do serviço de nomes uma referência para esse repositório, que passa a ser o repositório corrente.
 
 - [OK] listp Lista as peças do repositório corrente.
 
 - [OK] getp Busca uma peça por código. A busca é efetuada no repositório corrente. Se encontrada, a peça passa a ser a nova peça corrente.
 
-- [Pendente] showp Mostra atributos da peça corrente.
+- [OK] showp Mostra atributos da peça corrente.
 
 - [Pendente] clearlist Esvazia a lista de sub-peças corrente.
 
