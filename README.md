@@ -1,4 +1,7 @@
 # ep1-dsid
+
+LINK DO DOCS: https://docs.google.com/document/d/13L-WJe2U0b26mHa6CO9AOxPdiBFrtM4GL6nCVz1Li2E/edit?usp=sharing
+
 Código do desenvolvimento do EP 1 da disciplina de Desenvolvimento de Sistemas de Informações Distribuídos
 
 PROPOSTO:
