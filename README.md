@@ -16,7 +16,7 @@ image.png
  
  - [Ongoing] Objeto PartRepository
     - [OK]inserir Part
-    - [OK]recuperar Part
+    - [Pendente]recuperar Part
     - [OK]return list de todas as Parts do repositório
     *Neste EP, apenas os servidores implementados por PartRepository devem ser registrados e recuperados do serviço de nomes do Java RMI.
 
@@ -32,9 +32,9 @@ image.png
         - [OK]listar as peças
         - [OK]buscar peças
             - [OK]return nome e descricao
-            - nome do repositorio
-            - [ajustar]return primitiva/agregada?
-            - [ajustar]return qtd de subcomponentes diretos e primitivos da peça
+            - [OK]nome do repositorio
+            - [OK]return primitiva/agregada?
+            - [OK]return qtd de subcomponentes diretos e primitivos da peça
             - [OK]return lista de subpeças
         - [OK]adicionar novas peças
             - !peças agregadas cujas sub-peças estejam distribuı́das por vários repositórios.
