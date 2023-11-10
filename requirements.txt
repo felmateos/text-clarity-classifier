@@ -3,3 +3,4 @@ numpy
 nltk
 spacy
 scikit-learn
+gensim
