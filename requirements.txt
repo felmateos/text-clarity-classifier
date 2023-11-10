@@ -4,3 +4,4 @@ nltk
 spacy
 scikit-learn
 gensim
+transformers
