@@ -3,6 +3,9 @@
 
 ```[lista de Tarefas]
 
+
+```
+
 - [x] Criar vetorização com TF-IDF
 
 - [x] Criar embeddings usando o BERT
@@ -14,5 +17,3 @@
 - [ ] Salvar pesos dos modelos treinados
 
 - [ ] Salvar vetorizações
-```
-
