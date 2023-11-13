@@ -1,0 +1,16 @@
+\section{Análise Exploratória}
+\label{sec:analysis}
+
+Realizamos uma análise preliminar do conjunto de dados utilizando as bibliotecas pandas e numpy.
+
+Verificamos as informações gerais da base como presença de valores nulos, tipo de cada feature e quantidade de linhas. O dataframe possui 6 mil linhas e nenhuma vazia, todas do tipo 'object'. 
+
+Em seguida agrupamos os dados por classe e partindo da função 'describe' verificamos a presença de dados duplicados. Cada classe possui um conjunto de 2 mil textos sendo únicos:
+
+c1 - 1.839
+
+c234 - 1.929
+
+c5 - 1911
+
+E analisamos também as palavras que se repetiam em cada classe. Mapeamos as dez maiores classes e em comum ambas tinham como as três palavras mais presente em seus textos: 'informação', 'por' e 'para'.

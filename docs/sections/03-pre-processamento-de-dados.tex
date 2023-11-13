@@ -1,0 +1,41 @@
+\section{Pré-processamento}
+\label{sec:pre-processing}
+
+\subsection{Tratamento dos dados}
+
+No âmbito do tratamento de dados textuais, a análise precisa e eficiente requer uma série de técnicas avançadas. Abaixo descrevemos o processo que  utilizamos, abordando desde a tokenização até a codificação de rótulos.
+
+a. Tokenização:
+A primeira etapa envolve a tokenização, um processo fundamental que divide o texto em unidades semânticas chamadas tokens. Cada palavra ou expressão é isolada, facilitando análises subsequentes e fornecendo uma visão granular do conteúdo textual. Optamos por utilizar a biblioteca NLTK para esta tarefa.
+
+b. Lemmatização e remoção de pontuações:
+A lematização entra em cena para simplificar a análise ao reduzir palavras flexionadas às suas formas base. Essa técnica garante que diferentes formas de uma palavra sejam tratadas como uma única entidade, facilitando a compreensão e reduzindo a complexidade do conjunto de dados. Já para esta tarefa, optamos por usar a biblioteca SpaCy, onde fizemos uso do modelo `pt\_core\_news\_sm', vale ressaltar que juntamente desse processo, fizemos a remoção de pontuações, usando o tagger da biblioteca SpaCy.
+
+c. POS Tagging (Etiquetagem de Partes da Fala):
+A etiquetagem de partes da fala adiciona camadas de informações valiosas, atribuindo etiquetas a cada palavra de acordo com sua função gramatical. Essa abordagem aprimora a compreensão contextual, permitindo uma análise mais profunda das relações sintáticas e semânticas entre as palavras.
+
+d. 2-Grams e 3-Grams:
+A implementação de bigramas (2-grams) e trigramas (3-grams) expande a análise para além das palavras isoladas, considerando sequências de duas e três palavras consecutivas. Isso captura relações mais complexas e contextuais no texto, fornecendo insights mais ricos sobre a estrutura e o significado. Para essa tarefa optamos por utilizar a mesmo biblioteca que no tokenizer, isto é, a NLTK.
+
+e. Label Encoding (Codificação de Rótulos):
+A etapa final do processo consiste na codificação de rótulos, transformando informações textuais em representações numéricas. Essa técnica é crucial para a utilização eficiente de algoritmos de aprendizado de máquina, permitindo a aplicação de modelos preditivos a dados previamente tratados.
+
+Para sermos mais eficientes, optamos por armazenar o tratamentos feitos em arquivos do tipo CSV, sendo o mais relevante deles o ``esic2023\_cleaned.csv".
+
+\subsection{Separação do Conjunto de Dados}
+
+Com a finalidade de aumentar nossa confiança nos resultados das métricas que seriam obtidas após o treinamento dos modelos, optamos por dividir o conjunto de dados em duas partes, um conjunto de treino, correspondente a 70\% dos dados, e um conjunto de teste, correspondente a 30\% dos dados.
+
+Dessa forma, podemos realizar uma média de uma validação cruzada no co conjunto de treino e depois comparar seus resultados com a métrica de acurácia no conjunto de teste, para aferir se houve \emph{overfitting}.
+ 
+\subsection{Técnicas de Vetorização de Texto}
+
+Uma abordagem eficaz para essa tarefa é a utilização do método TF-IDF (Term Frequency-Inverse Document Frequency), e para implementar essa técnica de maneira robusta e eficiente, a biblioteca Scikit-Learn oferece ferramentas poderosas.
+
+O Scikit-Learn fornece uma implementação flexível e fácil de usar do TF-IDF, permitindo que os usuários ajustem parâmetros conforme necessário e integrem facilmente essa etapa em seus pipelines de PLN e aprendizado de máquina. Desse modo optamos por utilizá-la em nosso projeto, com o hiperparâmetro `max\_features=5000' na coluna `lemma' dos conjuntos de treino e teste.
+
+Optamos por armazenar as matrizes resultantes em arquivos NPZ e NPY, para os atributos e rótulos respesctivamente, nos poupando, então, de ter que gerá-los novamente tod vez que reiniciássemos o kernel do Jupyter.
+
+\subsection{Técnicas de Word Embeddings}
+
+Uma abordagem inovadora para essa tarefa é o uso do modelo BERTimbau, uma variação do BERT (Bidirectional Encoder Representations from Transformers), presente na renomada biblioteca transformers. Optamos por utilizá-lo na seguinte configuração: return\_tensors="pt", truncation=True, padding=True, max\_length=512, add\_special\_tokens = True. Pois foi a que conferiu maior resultado dentre as abordagens usando embeddings,

@@ -1,0 +1,106 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{cmap}		
+%\usepackage[utf8]{inputenc}			
+\usepackage[brazil]{babel}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\setlength {\marginparwidth }{2cm}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{indentfirst}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{pgfgantt}
+\usepackage{lipsum}
+\usepackage{xcolor}
+
+% set document font, font sizes, margin dimensions and spacing
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage[top=15mm,bottom=25mm,left=20mm,right=20mm]{geometry}
+\usepackage{setspace}\onehalfspacing
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\Large\bfseries}
+\titleformat*{\paragraph}{\Large\bfseries}
+\titleformat*{\subparagraph}{\Large\bfseries}
+\setlength{\parskip}{0.6em}
+
+\newif\ifblackandwhite
+\blackandwhitetrue
+
+\usepackage{etoolbox}
+\usepackage{longtable}%
+\AtBeginEnvironment{longtable}{%
+  \addfontfeature{RawFeature=+tnum;-onum}%  <--- requires LuaTeX
+}
+
+\usepackage{pdflscape}
+%\usepackage[svgnames]{xcolor}
+ \usepackage{colortbl}%
+   \newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+\usepackage{booktabs}
+
+\ifblackandwhite
+  \newcommand{\cheading}[2]{\textbf{#1\hfill #2}}
+  \newcommand{\highest}[1]{\textbf{#1}}% == highest score for question
+\else
+  \newcommand{\cheading}[2]{\textcolor{Maroon}{\textbf{#1\hfill #2}}}
+  \newcommand{\highest}[1]{\textcolor{Maroon}{\textbf{#1}}}%
+\fi
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  numbers=left,
+  numbersep=12pt,
+  numberstyle=\small\color{mygray},
+}
+\lstset{escapechar=@,style=customc}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%Definindo um comando todoin que aceita quebra de linha e fórmulas
+\newcommand\todoin[2][]{\todo[inline, caption={2do}, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+\newcommand\todogeg[2][]{\todo[inline, caption={#2}, color=yellow!100, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+\newcommand\todovwcm[2][]{\todo[inline, caption={#2}, color=red!100, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+\begin{document}
+
+\input{sections/title.tex}
+
+\newpage
+\tableofcontents
+\input{sections/01-introducao.tex}
+\input{sections/02-analise-exploratoria.tex}
+\input{sections/03-pre-processamento-de-dados.tex}
+\input{sections/04-treinamento-de-modelos.tex}
+\input{sections/05-avaliacao-de-modelos.tex}
+\input{sections/06-resultado-final-do-modelo.tex}
+
+\end{document}

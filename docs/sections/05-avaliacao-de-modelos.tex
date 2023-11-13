@@ -1,0 +1,17 @@
+\section{Avaliação dos Modelos}
+\label{sec:model_eval}
+
+Após termos realizado a otimização de busca de hiperparâmetros usando o grid search da biblioteca sklearn nos algoritmos mais promissores, chegamos à conclusão que o algoritmo de SVM (Support Vector Machine) se saíria melhor que os demais (Naive Bayes, Random Forest e LSTM), principalmente usando a vetorização produzida pelo TFIDF.
+
+Desse modo, nosso \emph{ensemble} final ficou com as seguintes características:
+
+Vetorização: TFIDF dos textos lemmatizados e sem pontuação, com `max\_features'=5000
+Algoritmo: SVM com `C'=2.0 e o `kernel'=rbf
+
+\subsection{Conjunto de treinamento}
+
+Dentro do conjunto de treinamento, que corresponde a 70\% dos do conjunto de dados, fizemos uma validação cruzada de 10 \emph{folds}. Após a obtençaõ da média dos valores dessa métrica, constatamos que o modelo obteve uma acurácia média de 56.55\%.
+
+\subsection{Conjunto de teste}
+
+Já no conjunto de teste, que corresponde a 30\% dos dados, realizamos um teste de acurácia para aferir se o modelo permanecia com resultados consistentes. Obtivemos o resultado de 58.17\% acurácia. Essa diferença aparenta ser pequena demais, e portanto, nos diz que o modelo não apresentou `overfitting'.

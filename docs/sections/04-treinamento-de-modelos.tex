@@ -1,0 +1,14 @@
+\section{Treinamento de modelos}
+\label{sec:model_training}
+
+\subsection{Teste de Modelos de classificadores}
+
+Sob o data frame disponibilizado foram aplicados diversos classificadores, não neurais e neurais. Dentre os não neurais foi testado a Naive Bayes, Regressão Logística, Random Forest e SVM. Para os modelos neurais foi escolhido a LSTM e o BERT, ambos com uma rede neural como classificador.
+
+As redes neurais demandam um tempo maior de processamento e apresentaram uma acurácia similar ou próxima das não neurais, porém com uma variação maior entre resultados. Sendo assim, escolhemos seguir com os algoritmos não neurais.
+
+
+\subsection{Modelagem do Algoritmo}
+
+Realizamos a otimização utilizando grid search do sklearn nos modelos de SVM e RF, escolhidos por ter a acurária maior dentre os modelos não neurais. Após algums testes e seleção de parâmetros o modelo que apresentou o melhor desempenho foi o SVM.
+
